@@ -1,6 +1,16 @@
+import { useState } from "react";
 import { Header } from "./Header";
+import { experience, projects } from "./constants";
 
 const App = () => {
+  const [jobCycleIndex, setJobCycleIndex] = useState(0);
+  const [currentSelectedJob, setCurrentSelectedJob] = useState<{
+    title: string;
+    job: string;
+    date: string;
+    points: string[];
+  }>(experience[0]);
+
   return (
     <div className="App">
       <Header />
@@ -92,34 +102,138 @@ const App = () => {
         </p>
       </div>
       <div className="about" id="about">
+        <div className="left">
+          <h2>
+            <span>01.</span> About Me <hr />
+          </h2>
+          <p>
+            I love working on new ideas and utilizing my variety of skills not
+            only with programming, but with 3D and 2D art, and audio design. In
+            my free-time, I typically work on side projects, tools for my daily
+            engineering work, or play games with friends. Some of my favorite
+            projects I've worked on is Orion Engine, a web-based game engine, A
+            medieval tavern game I worked on named DUNKEEP, and a fully featured
+            video and voice calling clone of discord named Symplee.
+          </p>
+          <p>
+            Over the years I have spent a lot of time learning and continue to
+            learn new tools and ideas every day. Sometimes I enjoy going deeper,
+            some of the things I have looked into this year are: compilers, open
+            source development, Rust, and more. I am always looking for new
+            things to learn and new people to learn from.
+          </p>
+          <p>Here are a few technologies I've worked with recently:</p>
+          <ul>
+            <li>▹ ReactJS</li>
+            <li>▹ Typescript</li>
+            <li>▹ Rust</li>
+            <li>▹ Node.JS</li>
+            <li>▹ C#</li>
+            <li>▹ SQL</li>
+          </ul>
+        </div>
+        <img src="/me.jpg" alt="Nathaniel Richards" />
+      </div>
+      <div className="experience" id="experience">
         <h2>
-          <span>01.</span> About Me <hr />
+          <span>02.</span> Experience <hr />
         </h2>
-        <p>
-          I love working on new ideas and utilizing my variety of skills not
-          only with programming, but with 3D and 2D art, and audio design. In my
-          free-time, I typically work on side projects, tools for my daily
-          engineering work, or play games with friends. Some of my favorite
-          projects I've worked on is Orion Engine, a web-based game engine, A
-          medieval tavern game I worked on named DUNKEEP, and a fully featured
-          video and voice calling clone of discord named Symplee.
-        </p>
-        <p>
-          Over the years I have spent a lot of time learning and continue to
-          learn new tools and ideas every day. Sometimes I enjoy going deeper,
-          some of the things I have looked into this year are: compilers, open
-          source development, Rust, and more. I am always looking for new things
-          to learn and new people to learn from.
-        </p>
-        <p>Here are a few technologies I've worked with recently:</p>
-        <ul>
-          <li>▹ ReactJS</li>
-          <li>▹ Typescript</li>
-          <li>▹ Rust</li>
-          <li>▹ Node.JS</li>
-          <li>▹ C#</li>
-          <li>▹ SQL</li>
-        </ul>
+        <div className="job-cycle">
+          <div className="left">
+            {experience.map((job, key) => (
+              <p
+                onClick={() => setCurrentSelectedJob(job)}
+                key={key}
+                style={{
+                  borderLeft:
+                    job.title === currentSelectedJob.title
+                      ? "2px solid #a2a6a8"
+                      : "2px solid #233554",
+                }}
+              >
+                {job.title}
+              </p>
+            ))}
+          </div>
+          <div className="right">
+            <h3>
+              {currentSelectedJob.job} <span>@ {currentSelectedJob.title}</span>
+            </h3>
+            <p className="date">{currentSelectedJob.date}</p>
+            <ul>
+              {currentSelectedJob.points.map((point, key) => (
+                <li key={key}>▹ {point}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="work" id="work">
+        <h2>
+          <span>03.</span> My Work <hr />
+        </h2>
+        <div className="projects">
+          {projects.map((project, key) => (
+            <div
+              key={key}
+              className="project-card"
+              style={{
+                backgroundImage: `url(/${project.image})`,
+              }}
+            >
+              <p className="tagline">Featured Project</p>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="tech">
+                {project.tech.map((tech, key) => (
+                  <p key={key}>{tech}</p>
+                ))}
+              </div>
+              <div className="links">
+                {project.github.includes("http") ? (
+                  <a href={project.github} target="__blank" rel="noreferrer">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      role="img"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="feather feather-github"
+                    >
+                      <title>GitHub</title>
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                  </a>
+                ) : (
+                  <p>{project.github}</p>
+                )}
+                {project.url.includes("http") ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    role="img"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    className="feather feather-external-link"
+                  >
+                    <title>External Link</title>
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                ) : (
+                  <p>{project.url}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
