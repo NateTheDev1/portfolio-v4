@@ -40,7 +40,7 @@ export const experience = [
 
 export const projects = [
   {
-    title: "SpacetimeDB.com",
+    title: "SpacetimeDB",
     description:
       "Worked over a year solo to build a product site for Clockwork Labs working with designers and customers.",
     tech: [
@@ -67,7 +67,7 @@ export const projects = [
   {
     title: "PulseSDK",
     description:
-      "Pulse is a lightweight server framework for Node.js. However, it isn't just a server framework, the primary focus of Pulse is reliability and validitity. Pulse works to create an ecosystem between the client and server that keeps clients up to date even when the server is under stress. This project includes a server framework, client framework, and a CLI tool.",
+      "Pulse is a lightweight server framework for Node.js. Pulse works to create an ecosystem between the client and server that keeps clients up to date. This project includes a server framework, client framework, and a CLI tool.",
     tech: ["Typescript", "Node.JS", "React", "Misc"],
     image: "pulse.png",
     url: "https://www.npmjs.com/package/pulse-server",
@@ -75,7 +75,8 @@ export const projects = [
   },
   {
     title: "Symplee",
-    description: "A fullstack discord clone with text, voice, and video chat.",
+    description:
+      "A fullstack discord clone with text, voice, and video chat. Built over a period of 3 months.",
     tech: ["Typescript", "React", "Node.JS", "GraphQL", "Apollo", "Twilio"],
     image: "symplee.png",
     url: "Upon Request",
