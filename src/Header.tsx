@@ -21,7 +21,7 @@ export const Header = () => {
   return (
     <>
       {!isMobile ? (
-        <nav className="header">
+        <nav className="header animate__animated animate__fadeIn">
           <a href="#about">
             <span>01.</span> About
           </a>

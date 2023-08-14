@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Header } from "./Header";
 import { experience, projects } from "./constants";
+import "animate.css/animate.min.css";
+import ScrollAnimation from "react-animate-on-scroll";
 
 const App = () => {
   const [jobCycleIndex, setJobCycleIndex] = useState(0);
@@ -14,7 +16,7 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <div className="email-right">
+      <div className="email-right animate__animated animate__bounce">
         <a
           href="mailto:nthnlrichards@gmail.com"
           target="__blank"
@@ -23,7 +25,7 @@ const App = () => {
           nthnlrichards@gmail.com
         </a>
       </div>
-      <ul className="socials-left">
+      <ul className="socials-left animate__animated animate__bounce">
         <li>
           <a
             href="https://github.com/natethedev1"
@@ -85,55 +87,60 @@ const App = () => {
           </a>
         </li>
       </ul>
-      <div className="hero">
-        <p className="tagline">Hi, my name is</p>
-        <h1>Nathaniel.</h1>
-        <h2>I engineer awesome things.</h2>
-        <p>
-          I am a software engineer and tech enthusiast who has worked in
-          multiple areas of the tech industry including business to business
-          software, customer service tools, real estate, food and drink, and
-          game development. I am currently based in Michigan, USA. I have been
-          able to work with both freelance clients as well as contract, and
-          full-time positions. I am passionate about building, learning, and
-          teaching, and I am always looking for new opportunities to do so.
-          Being creative and engineering solutions to problems is what I love to
-          do.
-        </p>
-      </div>
-      <div className="about" id="about">
-        <div className="left">
-          <h2>
-            <span>01.</span> About Me <hr />
-          </h2>
+      <ScrollAnimation animateIn="fadeInUp" duration={3}>
+        <div className="hero animate__animated animate__fadeInUp">
+          <p className="tagline">Hi, my name is</p>
+          <h1>Nathaniel.</h1>
+          <h2>I engineer awesome things.</h2>
           <p>
-            I love working on new ideas and utilizing my variety of skills not
-            only with programming, but with 3D and 2D art, and audio design. In
-            my free-time, I typically work on side projects, tools for my daily
-            engineering work, or play games with friends. Some of my favorite
-            projects I've worked on is Orion Engine, a web-based game engine, A
-            medieval tavern game I worked on named DUNKEEP, and a fully featured
-            video and voice calling clone of discord named Symplee.
+            I am a software engineer and tech enthusiast who has worked in
+            multiple areas of the tech industry including business to business
+            software, customer service tools, real estate, food and drink, and
+            game development. I am currently based in Michigan, USA. I have been
+            able to work with both freelance clients as well as contract, and
+            full-time positions. I am passionate about building, learning, and
+            teaching, and I am always looking for new opportunities to do so.
+            Being creative and engineering solutions to problems is what I love
+            to do.
           </p>
-          <p>
-            Over the years I have spent a lot of time learning and continue to
-            learn new tools and ideas every day. Sometimes I enjoy going deeper,
-            some of the things I have looked into this year are: compilers, open
-            source development, Rust, and more. I am always looking for new
-            things to learn and new people to learn from.
-          </p>
-          <p>Here are a few technologies I've worked with recently:</p>
-          <ul>
-            <li>▹ ReactJS</li>
-            <li>▹ Typescript</li>
-            <li>▹ Rust</li>
-            <li>▹ Node.JS</li>
-            <li>▹ C#</li>
-            <li>▹ SQL</li>
-          </ul>
         </div>
-        <img src="/me.jpg" alt="Nathaniel Richards" />
-      </div>
+      </ScrollAnimation>
+      <ScrollAnimation animateIn="fadeInUp" offset={600}>
+        <div className="about" id="about">
+          <div className="left">
+            <h2>
+              <span>01.</span> About Me <hr />
+            </h2>
+            <p>
+              I love working on new ideas and utilizing my variety of skills not
+              only with programming, but with 3D and 2D art, and audio design.
+              In my free-time, I typically work on side projects, tools for my
+              daily engineering work, or play games with friends. Some of my
+              favorite projects I've worked on is Orion Engine, a web-based game
+              engine, A medieval tavern game I worked on named DUNKEEP, and a
+              fully featured video and voice calling clone of discord named
+              Symplee.
+            </p>
+            <p>
+              Over the years I have spent a lot of time learning and continue to
+              learn new tools and ideas every day. Sometimes I enjoy going
+              deeper, some of the things I have looked into this year are:
+              compilers, open source development, Rust, and more. I am always
+              looking for new things to learn and new people to learn from.
+            </p>
+            <p>Here are a few technologies I've worked with recently:</p>
+            <ul>
+              <li>▹ ReactJS</li>
+              <li>▹ Typescript</li>
+              <li>▹ Rust</li>
+              <li>▹ Node.JS</li>
+              <li>▹ C#</li>
+              <li>▹ SQL</li>
+            </ul>
+          </div>
+          <img src="/me.jpg" alt="Nathaniel Richards" />
+        </div>
+      </ScrollAnimation>
       <div className="experience" id="experience">
         <h2>
           <span>02.</span> Experience <hr />
@@ -234,7 +241,12 @@ const App = () => {
       <div className="contact" id="contact">
         <p className="tagline">04. What's Next?</p>
         <h2>Get In Touch</h2>
-        <p className="sub">I am a software engineer and game developer who is passionate about designing, developing, and shipping production quality technology and games. If you want to contact me I am available 7 days a week 24 hours a day.</p>
+        <p className="sub">
+          I am a software engineer and game developer who is passionate about
+          designing, developing, and shipping production quality technology and
+          games. If you want to contact me I am available 7 days a week 24 hours
+          a day.
+        </p>
         <a href="mailto:nthnlrichards@gmail.com">Say Hello</a>
       </div>
     </div>
