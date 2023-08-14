@@ -48,7 +48,7 @@ const App = () => {
           </a>
         </li>
         <li>
-          <a href="" target="__blank" rel="noreferrer">
+          <a href="https://twitter.com/NateTheWebDev" target="__blank" rel="noreferrer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               role="img"
@@ -66,7 +66,7 @@ const App = () => {
           </a>
         </li>
         <li>
-          <a href="" target="__blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/nathaniel-richards-dev/" target="__blank" rel="noreferrer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               role="img"
