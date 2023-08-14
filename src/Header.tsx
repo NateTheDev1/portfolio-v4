@@ -62,7 +62,7 @@ export const Header = () => {
             overlayClassName="drawer-overlay"
           >
             <svg
-            className="menu-close-btn"
+              className="menu-close-btn"
               onClick={() => setDrawerOpen(false)}
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -75,19 +75,23 @@ export const Header = () => {
               />
             </svg>
             <nav className="header">
-              <a href="#about">
+              <a href="#about" onClick={() => setDrawerOpen(false)}>
                 <span>01.</span> About
               </a>
-              <a href="#experience">
+              <a href="#experience" onClick={() => setDrawerOpen(false)}>
                 <span>02.</span> Experience
               </a>
-              <a href="#work">
+              <a href="#work" onClick={() => setDrawerOpen(false)}>
                 <span>03.</span> Work
               </a>
-              <a href="#contact">
+              <a href="#contact" onClick={() => setDrawerOpen(false)}>
                 <span>04.</span> Contact
               </a>
-              <a href="/resume2023.pdf" className="btn">
+              <a
+                href="/resume2023.pdf"
+                className="btn"
+                onClick={() => setDrawerOpen(false)}
+              >
                 Resume
               </a>
             </nav>
