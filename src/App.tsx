@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Header } from "./Header";
 import { experience, projects } from "./constants";
+import "animate.css/animate.min.css";
 
 const App = () => {
   const [jobCycleIndex, setJobCycleIndex] = useState(0);
