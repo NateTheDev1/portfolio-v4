@@ -68,10 +68,11 @@ h1 {
   text-align: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 150px;
   max-width: 1700px;
-  height: 50vh;
+  min-height: 50vh;
   width: 65%;
+  margin-bottom: 50px;
 
   @media (max-width: 1300px) {
     width: 100%;
@@ -128,7 +129,7 @@ h1 {
 
     hr {
       border: 1px solid #233554;
-      width: 300px;
+      flex: 1;
       margin: 0;
       margin-left: 20px;
     }
@@ -164,7 +165,7 @@ h1 {
 
     hr {
       border: 1px solid #233554;
-      width: 300px;
+      flex: 1;
       margin: 0;
       margin-left: 20px;
     }
@@ -263,7 +264,7 @@ h1 {
   align-items: center;
   margin-top: 200px;
   max-width: 1700px;
-  height: 50vh;
+  min-height: 50vh;
 
   @media (max-width: 780px) {
     width: 100%;
@@ -285,7 +286,7 @@ h1 {
 
     hr {
       border: 1px solid #233554;
-      width: 300px;
+      flex: 1;
       margin: 0;
       margin-left: 20px;
     }
@@ -296,6 +297,14 @@ h1 {
     display: flex;
     align-items: baseline;
 
+    @media (max-width: 620px) {
+      flex-direction: column;
+
+      .left {
+        width: 100%;
+      }
+    }
+
     .left {
       display: flex;
       flex-direction: column;
@@ -304,6 +313,12 @@ h1 {
     .right {
       margin-left: 70px;
       width: 70%;
+
+      @media (max-width: 620px) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 50px;
+      }
 
       h3 {
         font-weight: 500;
@@ -358,9 +373,10 @@ h1 {
 .about {
   display: flex;
   align-items: center;
-  height: 90vh;
+  min-height: 90vh;
   width: 65%;
   margin: 0 auto;
+  margin-top: 200px;
   max-width: 1700px;
 
   @media (max-width: 1356px) {
@@ -371,7 +387,6 @@ h1 {
 
   @media (max-width: 780px) {
     width: 100%;
-    margin: 0 auto;
     padding: 50px;
   }
 
@@ -410,7 +425,7 @@ h1 {
 
     hr {
       border: 1px solid #233554;
-      width: 300px;
+      flex: 1;
       margin: 0;
       margin-left: 20px;
     }
@@ -438,7 +453,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90vh;
+  min-height: 90vh;
   width: 65%;
   margin: 0 auto;
   max-width: 1700px;
