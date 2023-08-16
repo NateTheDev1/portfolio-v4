@@ -56,6 +56,15 @@ export const projects = [
     github: "N/A (Private)",
   },
   {
+    title: "Tweeter",
+    description:
+      "A simple twitter clone with posts, news, likes, comments, and more!",
+    tech: ["JavaScript", "React", "Node.JS", "ExpressJS", "MongoDB"],
+    image: "tweeter.png",
+    url: "https://tweeter-app.vercel.app/",
+    github: "https://github.com/NateTheDev1/tweeter-app",
+  },
+  {
     title: "orion-engine",
     description:
       "Built a simple and lightweight web based game development library for React.",
