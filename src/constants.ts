@@ -29,11 +29,21 @@ export const experience = [
   {
     title: "Clockwork Labs",
     job: "Sr. Software Engineer",
-    date: "Jul 2022 - Present",
+    date: "Jul 2022 - April 2024",
     points: [
       "Worked on a team alone to build spacetimedb.com from the ground up.",
       "Worked in rust to help build a large scale database and cloud environment",
       "Worked on the game team to build UI in C# and self-developed tools for the game BitCraft.",
+    ],
+  },
+  {
+    title: "FLEX Dental",
+    job: "Fullstack Engineer",
+    date: "Apr 2024 - Present",
+    points: [
+      "Working on a team to build a fullstack application for dental practices.",
+      "Working with complex systems and configurations",
+      "Working on an application with a large customer base and important HIPPA compliant data.",
     ],
   },
 ];

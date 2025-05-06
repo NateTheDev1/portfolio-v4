@@ -34,7 +34,7 @@ export const Header = () => {
           <a href="#contact">
             <span>04.</span> Contact
           </a>
-          <a href="/resume2023.pdf" className="btn">
+          <a href="/resume.pdf" className="btn">
             Resume
           </a>
         </nav>
@@ -88,7 +88,7 @@ export const Header = () => {
                 <span>04.</span> Contact
               </a>
               <a
-                href="/resume2023.pdf"
+                href="/resume.pdf"
                 className="btn"
                 onClick={() => setDrawerOpen(false)}
               >
