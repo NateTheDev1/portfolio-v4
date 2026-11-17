@@ -25,7 +25,6 @@ const structuredData = {
   image: `${SITE_URL}/me.jpg`,
   sameAs: [
     "https://github.com/NateTheDev1",
-    "https://twitter.com/NateTheWebDev",
     "https://www.linkedin.com/in/nathaniel-richards-dev/",
   ],
 };
