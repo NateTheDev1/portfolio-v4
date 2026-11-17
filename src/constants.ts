@@ -50,6 +50,15 @@ export const experience = [
 
 export const projects = [
   {
+    title: "PicExhibit",
+    description:
+      "Built a platform for photographers to deliver, proof and sell a shoot from one link, with client galleries, invoices, contracts and print sales.",
+    tech: ["Rust", "Axum", "React", "Typescript", "TailwindCSS", "Postgres"],
+    image: "picexhibit.png",
+    url: "https://picexhibit.com",
+    github: "N/A (Private)",
+  },
+  {
     title: "SpacetimeDB",
     description:
       "Worked over a year solo to build a product site for Clockwork Labs working with designers and customers.",
@@ -63,6 +72,24 @@ export const projects = [
     ],
     image: "spacetime.png",
     url: "https://spacetimedb.com",
+    github: "N/A (Private)",
+  },
+  {
+    title: "Cortex",
+    description:
+      "An ESP32 home security system with a companion mobile app, written in Rust. It runs entirely offline and needs no network connection at all.",
+    tech: ["Rust", "ESP32", "Embedded", "Mobile"],
+    image: "cortex.png",
+    url: "N/A",
+    github: "N/A (Private)",
+  },
+  {
+    title: "Wholewareness",
+    description:
+      "Client work. Built the site for a Michigan private chef offering seasonal, farm-to-table menus for weddings, retreats, and gatherings, including the event inquiry flow.",
+    tech: ["Next.js", "React"],
+    image: "wholewareness.png",
+    url: "https://wholewareness.net/",
     github: "N/A (Private)",
   },
   {

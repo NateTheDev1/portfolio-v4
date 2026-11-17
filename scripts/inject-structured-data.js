@@ -14,7 +14,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const SITE_URL = "https://nathanielrichards.dev";
+const SITE_URL = "https://nathanielengineers.com";
 
 const structuredData = {
   "@context": "https://schema.org",
