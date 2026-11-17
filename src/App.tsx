@@ -4,7 +4,6 @@ import { experience, projects } from "./constants";
 import "animate.css/animate.min.css";
 
 const App = () => {
-  const [jobCycleIndex, setJobCycleIndex] = useState(0);
   const [currentSelectedJob, setCurrentSelectedJob] = useState<{
     title: string;
     job: string;
@@ -18,8 +17,6 @@ const App = () => {
       <div className="email-right animate__animated animate__bounce">
         <a
           href="mailto:nthnlrichards@gmail.com"
-          target="__blank"
-          rel="noreferrer"
         >
           nthnlrichards@gmail.com
         </a>
@@ -28,7 +25,7 @@ const App = () => {
         <li>
           <a
             href="https://github.com/natethedev1"
-            target="__blank"
+            target="_blank"
             rel="noreferrer"
           >
             <svg
@@ -50,7 +47,7 @@ const App = () => {
         <li>
           <a
             href="https://twitter.com/NateTheWebDev"
-            target="__blank"
+            target="_blank"
             rel="noreferrer"
           >
             <svg
@@ -72,7 +69,7 @@ const App = () => {
         <li>
           <a
             href="https://www.linkedin.com/in/nathaniel-richards-dev/"
-            target="__blank"
+            target="_blank"
             rel="noreferrer"
           >
             <svg
@@ -150,7 +147,9 @@ const App = () => {
         <div className="job-cycle">
           <div className="left">
             {experience.map((job, key) => (
-              <p
+              <button
+                type="button"
+                aria-pressed={job.title === currentSelectedJob.title}
                 onClick={() => setCurrentSelectedJob(job)}
                 key={key}
                 style={{
@@ -161,7 +160,7 @@ const App = () => {
                 }}
               >
                 {job.title}
-              </p>
+              </button>
             ))}
           </div>
           <div className="right">
@@ -195,7 +194,7 @@ const App = () => {
                 </div>
                 <div className="links">
                   {project.github.includes("http") ? (
-                    <a href={project.github} target="__blank" rel="noreferrer">
+                    <a href={project.github} target="_blank" rel="noreferrer">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         role="img"
@@ -215,16 +214,16 @@ const App = () => {
                     <p>{project.github}</p>
                   )}
                   {project.url.includes("http") ? (
-                    <a href={project.url} target="__blank" rel="noreferrer">
+                    <a href={project.url} target="_blank" rel="noreferrer">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         role="img"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         className="feather feather-external-link"
                       >
                         <title>External Link</title>

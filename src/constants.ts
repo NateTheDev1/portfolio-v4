@@ -1,20 +1,12 @@
 export const experience = [
   {
-    title: "Biggby Coffee",
-    job: "Software Engineer",
-    date: "Sep 2020 - May 2021",
+    title: "FLEX Dental",
+    job: "Fullstack Engineer",
+    date: "Apr 2024 - Present",
     points: [
-      "Worked on several internal applications as well as in-store tablets, point of sale systems in C++",
-      "Worked on a large-scale Apollo Server and GraphQL frontend/backend application for online ordering using typescript and React",
-    ],
-  },
-  {
-    title: "MHVillage",
-    job: "Software Engineer",
-    date: "May 2021 - Jul 2022",
-    points: [
-      "Worked on several inner-business and customer service tools using PHP and HTML/CSS",
-      "Worked on mhvillage.com, their core product.",
+      "Working on a team to build a fullstack application for dental practices.",
+      "Working with complex systems and configurations",
+      "Working on an application with a large customer base and important HIPAA compliant data.",
     ],
   },
   {
@@ -29,21 +21,29 @@ export const experience = [
   {
     title: "Clockwork Labs",
     job: "Sr. Software Engineer",
-    date: "Jul 2022 - April 2024",
+    date: "Jul 2022 - Apr 2024",
     points: [
-      "Worked on a team alone to build spacetimedb.com from the ground up.",
+      "Built spacetimedb.com from the ground up as the sole engineer.",
       "Worked in rust to help build a large scale database and cloud environment",
       "Worked on the game team to build UI in C# and self-developed tools for the game BitCraft.",
     ],
   },
   {
-    title: "FLEX Dental",
-    job: "Fullstack Engineer",
-    date: "Apr 2024 - Present",
+    title: "MHVillage",
+    job: "Software Engineer",
+    date: "May 2021 - Jul 2022",
     points: [
-      "Working on a team to build a fullstack application for dental practices.",
-      "Working with complex systems and configurations",
-      "Working on an application with a large customer base and important HIPPA compliant data.",
+      "Worked on several inner-business and customer service tools using PHP and HTML/CSS",
+      "Worked on mhvillage.com, their core product.",
+    ],
+  },
+  {
+    title: "Biggby Coffee",
+    job: "Software Engineer",
+    date: "Sep 2020 - May 2021",
+    points: [
+      "Worked on several internal applications as well as in-store tablets, point of sale systems in C++",
+      "Worked on a large-scale Apollo Server and GraphQL frontend/backend application for online ordering using typescript and React",
     ],
   },
 ];

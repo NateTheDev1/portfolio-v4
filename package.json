@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/react-animate-on-scroll": "^2.1.5",
     "@types/react-burger-menu": "^2.8.3"
   }

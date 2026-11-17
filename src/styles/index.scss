@@ -357,8 +357,14 @@ h1 {
 
     .left {
       flex: 1;
-      p {
+      p,
+      button {
         font-family: var(--font-mono);
+        font-size: inherit;
+        color: inherit;
+        text-align: left;
+        background: none;
+        border: 0;
         border-left: 2px solid #233554;
         height: 50px;
         display: flex;
@@ -369,6 +375,11 @@ h1 {
         &:hover {
           cursor: pointer;
           background-color: #233554;
+        }
+
+        &:focus-visible {
+          outline: 2px solid #fecc67;
+          outline-offset: -2px;
         }
       }
     }
@@ -590,8 +601,18 @@ h1 {
 
 .menu-close-btn,
 .menu-open-btn {
+  background: none;
+  border: 0;
+  padding: 0;
+  line-height: 0;
+  color: inherit;
   cursor: pointer;
   transition: 0.2s ease-in-out;
+
+  &:focus-visible {
+    outline: 2px solid #fecc67;
+    outline-offset: 4px;
+  }
 
   &:hover {
     opacity: 0.5;
